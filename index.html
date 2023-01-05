@@ -1,0 +1,115 @@
+<head>
+    <title>The Cloud Cast - Weather</title>
+    <meta name="description" content="The weather for locations all over the world, presented in simple style and without ads.">
+    <link rel="stylesheet" href="style.css">
+    <!--For offline use comment out-->
+    <script src="https://kit.fontawesome.com/28d66386d8.js" crossorigin="anonymous"></script>
+
+</head>
+
+<div class="weather-app">
+    <div class="container">
+        <div class="modal-container" id="modal_container">
+            <div class="modal">
+                <h1>Release Notes</h1>
+                <p>
+                    <h2><b>Version 1.2</b><br>released on 01/05/2023</h2>
+                    Here is what's new in this release: <br><br>
+                    - Release Notes were added <br>
+                    - Darkmode was is now saved in a cookie<br>
+                    - AirQuality was added<br>
+                    - New wallpapers for different weather conditions<br>
+                    - Bug fixes behind the scenes <br><br>
+                    All images are from Unsplash and belong to their rightful owners.<br>
+                    <b>© Copyright 2023 by ItsBeacon</b>
+                </p>
+                
+                <button id="close" class="close">
+                    Close
+                </button>
+            </div>
+        </div>
+
+        
+        <h3 class="brand">the cloud coast</h3>
+        
+        <div>
+            <h1 class="temp">?&#176;</h1>
+            <div class="city-time">
+                <h1 class="name">City</h1>
+                <small>
+                    <span class="time">00:00</span>
+                    -
+                    <span class="date">
+                        Date
+                    </span>
+                </small>
+            </div>
+            <div class="weather">
+                
+                <img
+                    src="./icons/day/113.png"
+                    class="icon"
+                    alt="icon"
+                    width="50"
+                    height="50"
+                    id="weather_icon"
+                />
+                <span class="condition">Loading weather</span>
+            </div>
+        </div>
+    </div>
+    <div class="panel">
+        <form id="locationInput">
+            <input
+                type="text"
+                class="search"
+                placeholder="Search for Location..."
+            />
+            <img src="icons/assets/moon.png" id="mode">
+            <button type="submit" class="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <ul class="cities">
+            <li class="city">London</li>
+            <li class="city">Berlin</li>
+            <li class="city">New York</li>
+        </ul>
+        <ul class="details">
+            <h4>Weather Details</h4>
+            <li>
+                <span class="detail-text">Cloudy</span>
+                <span class="cloud"> </span>
+            </li>
+            <li>
+                <span class="detail-text">Humidity</span>
+                <span class="humidity"> </span>
+            </li>
+            <li>
+                <span class="detail-text">Wind</span>
+                <span class="wind"> </span>
+            </li>
+            <li>
+                <span class="detail-text">Visibility</span>
+                <span class="vis"> </span>
+            </li>
+            <li>
+                <span class="detail-text">Air Quality by PM10</span>
+                <span class="airqual"> </span>
+            </li>
+            
+            <br>
+            <li>
+                <button id="open" class="open">
+                    Version 1.2 by ItsBeacon
+                </button>
+                <span class="up-date">01/05/2023 version</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<body>
+    <script src="main.js"></script>
+</body>
